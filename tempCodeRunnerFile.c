@@ -1,0 +1,1 @@
+ int *p_prod = &produccion[0][0];

@@ -7,7 +7,7 @@
 
 int main() {
 
-    char *nombres[NOMBRES];
+    char *nombres[NOMBRES]; //vector de punteros
     int i;
     char nombre[20];
     printf("Ingrese %d nombres:\n", NOMBRES);

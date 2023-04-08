@@ -9,14 +9,15 @@ int main() {
 
     char *nombres[NOMBRES];
     int i;
-
+    char nombre[20];
     printf("Ingrese %d nombres:\n", NOMBRES);
 
     for (i = 0; i < NOMBRES; i++) {
-    
-        nombres[i] = (char *) malloc(LONGITUD_NOMBRE * sizeof(char));     // Reservar memoria para el nombre
 
-        gets(nombres[i]); // Leer el nombre ingresado por el usuario
+        gets(nombre); 
+        /*Al utilizar la función strlen(nombre) para calcular la longitud de la cadena de caracteres ingresada, estamos asegurando que la memoria asignada para almacenar el nombre es exactamente la necesaria. De lo contrario, podríamos estar asignando más memoria de la necesaria. Además, al utilizar la variable nombre nos aseguramos de que no estamos sobrescribiendo datos en otras áreas de la memoria.*/
+        nombres[i] = (char *) malloc((strlen(nombre)+1) * sizeof(char));     // Reservar memoria para el nombre
+        strcpy(nombres[i], nombre);
     }
 
     printf("Los nombres ingresados son:\n");

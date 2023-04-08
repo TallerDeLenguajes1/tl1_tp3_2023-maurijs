@@ -1,1 +1,5 @@
- int *p_prod = &produccion[0][0];
+ar:\n")
+        // for (int k = 0; k < count; i++)
+        // {
+        //     /* code */
+        // }

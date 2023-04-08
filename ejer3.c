@@ -24,6 +24,18 @@ int main() {
         printf("%s\n", nombres[i]);
     }
 
+    // Mostrar la tercera letra de cada nombre ingresado usando doble indice
+    printf("La tercera letra de cada nombre es:\n");
+    for (i = 0; i < NOMBRES; i++) {
+        printf("%c\n", nombres[i][2]);
+    }
+
+     // Mostrar la tercera  cuarta letra de cada nombre ingresado usando aritmetica de puntero
+    printf("La tercera letra de cada nombre es:\n");
+    for (i = 0; i < NOMBRES; i++) {
+        printf("%c\n", *(nombres[i] + 2));
+    }
+
     // Liberar la memoria reservada para los nombres
     for (i = 0; i < NOMBRES; i++) {
         free(nombres[i]);

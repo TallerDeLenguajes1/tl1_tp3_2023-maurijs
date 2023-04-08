@@ -8,7 +8,7 @@ int main()
 {
     
     int produccion[ANIO][MES];
-    int *p_prod = &produccion[0][0];
+    int *p_prod = produccion;
     printf("Cargo los elementos a la matriz usando punteros con notacion subindexada\n\n");
     for (int i = 0; i < MES*ANIO; i++)
     {
@@ -31,3 +31,9 @@ int main()
         }  
     }
 }
+/* for (i = 0; i < ANIOS; i++) {
+        for (j = 0; j < MESES; j++) {
+            produccion[i][j] = rand() % 40001 + 10000; // Valor aleatorio entre 10000 y 50000
+        }
+    }
+*/    
